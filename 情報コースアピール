@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>香川大学 情報コースの魅力</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .point {
+      background-color: white;
+      border-left: 5px solid #00b4d8;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .point h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #0077b6;
+    }
+
+    footer {
+      background-color: #caf0f8;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>香川大学 情報コースの魅力</h1>
+  </header>
+
+  <main>
+    <section class="point">
+      <h2>1. 地域密着型プロジェクト</h2>
+      <p>地元企業や高松市などと連携し、地域課題を情報技術で解決するプロジェクトが行われています。</p>
+    </section>
+
+    <section class="point">
+      <h2>2. 理系以外の分野も学べる</h2>
+      <p>デザイン思考、UI、リスクマネジメントなども学べ、ユーザー視点を重視したシステムづくりを実践します。</p>
+    </section>
+
+    <section class="point">
+      <h2>3. 幅広い情報分野に対応</h2>
+      <p>人工知能、情報学基礎、情報基盤構築技術、セキュリティ技術など、現代社会に必要な分野を幅広く学ぶことができます。</p>
+    </section>
+  </main>
+
+</body>
+</html>

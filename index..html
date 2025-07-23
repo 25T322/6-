@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>香川大学情報コース</title>
+  <style>
+    body {
+      background-color: #f0fff0; /* 薄い黄緑（ホワイトグリーン） */
+      font-family: sans-serif;
+      color: #2f4f2f; /* ダークオリーブグリーンで文字 */
+      padding: 20px;
+    }
+
+    h1 {
+      background-color: #98fb98; /* パステルグリーン */
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #228b22; /* フォレストグリーン */
+    }
+
+    ul {
+      background-color: #e0ffe0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #adff2f;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #9acd32;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>香川大学 創造工学部 情報コース</h1>
+
+  <h2>情報コースとは？</h2>
+  <p>情報コースでは、パソコンやプログラミングについて学びます。</p>
+
+  <h2>もっと知りたい？</h2>
+  <button onclick="showMore()">コースの特徴を見る</button>
+  <div id="features" style="display: none;">
+    <ul>
+      <li>プログラミングが学べる</li>
+      <li>AIやロボットについて知れる</li>
+      <li>先生がやさしい</li>
+      <li>いろんなプロジェクトに参加できる</li>
+    </ul>
+  </div>
+
+  <h2>卒業後について</h2>
+  <p>IT会社に入ったり、大学院に進んだりします。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>くわしくは香川大学のホームページを見てください。</p>
+
+  <footer>
+    <p>&copy; 2025 香川大学</p>
+  </footer>
+
+  <script>
+    function showMore() {
+      var features = document.getElementById("features");
+      if (features.style.display === "none") {
+        features.style.display = "block";
+      } else {
+        features.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

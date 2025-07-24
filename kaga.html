@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>香川大学 情報コース</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="images/logo.png" alt="香川大学 情報コース ロゴ" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">コースとは</a></li>
+          <li><a href="#features">特色</a></li>
+          <li><a href="#voices">学生の声</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+        <div class="hamburger">
+          <div></div><div></div><div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>香川大学 創造工学部 情報コース</h1>
+      <p>未来のITリーダーを育てる、実践と創造の学び舎</p>
+      <a href="#about" class="btn">もっと知る</a>
+    </div>
+  </section>
+
+  <section id="about" class="section container">
+    <h2>情報コースとは？</h2>
+    <p>情報コースでは、AI・IoT・セキュリティ・ソフトウェア開発など、現代社会に不可欠な技術を体系的に学べます。プロジェクトベースの授業やインターンシップも充実。</p>
+  </section>
+
+  <section id="features" class="section container">
+    <h2>学びの特色</h2>
+    <ul>
+      <li>✔️ 少人数制で手厚いサポート</li>
+      <li>✔️ 実践的なプログラミング演習</li>
+      <li>✔️ 最先端の研究プロジェクトに参加</li>
+    </ul>
+  </section>
+
+  <section id="voices" class="section container">
+    <h2>学生の声</h2>
+    <blockquote>「チーム開発や実習が多く、成長を実感できます！」 - 3年生</blockquote>
+  </section>
+
+  <section id="contact" class="section container">
+    <h2>アクセス・お問い合わせ</h2>
+    <p>〒760‑8521 香川県高松市幸町1‑1</p>
+    <p>お問い合わせ: <a href="mailto:info@kagawa-u.ac.jp">info@kagawa-u.ac.jp</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 香川大学 創造工学部 情報コース</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Arial',sans-serif; line-height:1.6; background:#f9f9f9; color:#333; }
+.container { width:90%; max-width:1000px; margin:0 auto; }
+
+/* Header */
+header { background:#fff; position:fixed; width:100%; top:0; z-index:1000; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+.logo { height:50px; margin:10px 0; }
+nav { display:flex; justify-content:space-between; align-items:center; }
+.nav-links { list-style:none; display:flex; }
+.nav-links li { margin:0 1rem; }
+.nav-links a { text-decoration:none; color:#333; padding:0.5rem; }
+.nav-links a.active { color:#0073e6; border-bottom:2px solid #0073e6; }
+.hamburger { display:none; flex-direction:column; cursor:pointer; }
+.hamburger div { width:25px; height:3px; background:#333; margin:4px; }
+
+/* Hero */
+section.hero { background:url('images/hero-bg.jpg') center/cover no-repeat; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding-top:60px; }
+.hero-content h1 { font-size:2.5rem; }
+.btn { background:#0073e6; color:#fff; padding:0.7rem 1.5rem; text-decoration:none; border-radius:4px; }
+
+/* Sections */
+.section { padding:6rem 0; background:#fff; margin-top:60px; }
+.section h2 { color:#0073e6; margin-bottom:1rem; }
+ul li { margin:0.5rem 0; }
+
+/* Footer */
+footer { text-align:center; padding:2rem; background:#0073e6; color:#fff; }
+
+/* Responsive */
+@media(max-width:768px) {
+  .hero-content h1 { font-size:1.8rem; }
+  .nav-links { display:none; flex-direction:column; background:#fff; position:absolute; top:60px; right:0; width:200px; }
+  .nav-links li { margin:1rem 0; text-align:right; }
+  .hamburger { display:flex; }
+  nav.open .nav-links { display:flex; }
+}
+// ハンバーガーメニューの開閉
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('nav');
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+// スクロールでナビリンクにアクティブクラス
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let fromTop = window.scrollY + 80;
+  sections.forEach(section => {
+    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + section.id);
+      });
+    }
+  });
+});
